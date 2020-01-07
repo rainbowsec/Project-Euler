@@ -12,8 +12,8 @@ fn fibo_even_sum(max: u32) -> u32 {
 }
 
 fn main() {
-    println!("{}", fibo_even_sum(10));
-    println!("{}", fibo_even_sum(18));
-    println!("{}", fibo_even_sum(23));
-    println!("{}", fibo_even_sum(43));
+    let nums = vec![10, 18, 23, 43];
+    for num in nums {
+        println!("The sum of all first {} even term of fibonnaci is {}", num, fibo_even_sum(num));
+    }
 }
