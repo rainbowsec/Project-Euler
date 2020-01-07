@@ -4,3 +4,4 @@ This repository contains my solutions for diverse challenges of the project eule
 | ID | Description/Title | Language | Folder |
 |---|---|---|---|
 | 1 | Multiples of 3 and 5|  Rust | multiples\_of\_3\_and\_5|
+| 2 | Even Fibonacci Numbers | Rust | even\_fibonacci\_numbers|
