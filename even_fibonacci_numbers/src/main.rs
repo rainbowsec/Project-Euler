@@ -11,9 +11,23 @@ fn fibo_even_sum(max: u32) -> u32 {
     sum
 }
 
-fn main() {
-    let nums = vec![10, 18, 23, 43];
-    for num in nums {
-        println!("The sum of all first {} even term of fibonnaci is {}", num, fibo_even_sum(num));
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_fibo_even_sum() {
+        let nums = vec![10, 18, 23, 43];
+        let expected = vec![44, 3382, 60696, 350704366];
+        let i = nums.len() - 1;
+        for j in 0..i {
+            assert_eq!(fibo_even_sum(nums[j]), expected[j]);
+        }
+
     }
+}
+
+fn main() {
+    println!("To run the test suite: cargo test");
 }

@@ -27,8 +27,5 @@ fn largest_prime_factor(n: u64) -> u64 {
 }
 
 fn main() {
-    let nums = vec![2, 3, 5, 7, 13195, 600851475143];
-    for num in nums {
-        println!("the largest prime factor for {} is {}", num, largest_prime_factor(num));
-    }
+    println!("To run the test suite: cargo test");
 }
