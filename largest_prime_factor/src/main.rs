@@ -26,6 +26,30 @@ fn largest_prime_factor(n: u64) -> u64 {
     prime_factor
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_largest_prime_factor() {
+        let nums = vec![2, 3, 5, 7, 13195, 600851475143];
+        let expected = vec![2, 3, 5, 7, 29, 6857];
+        let i = nums.len() - 1;
+        for j in 0..i {
+            assert_eq!(largest_prime_factor(nums[j]), expected[j]);
+        }
+
+    }
+
+    #[test]
+    fn test_is_prime() {
+        let nums = vec![2, 3, 5, 7, 29, 6857];
+        for num in nums {
+            assert!(is_prime(num));
+        }
+    }
+}
+
 fn main() {
     println!("To run the test suite: cargo test");
 }
